@@ -1,0 +1,14 @@
+<table>
+  <tbody>
+    <tr *ngFor="let row of getCells(); let rowIx = index">
+      <td *ngFor="let col of row; let colIx = index" 
+          (click)="set(colIx,rowIx)" 
+          [class]="col.class">
+        {{ col.playerName }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 [hidden]="winnerIndex === 0">The winner is {{getWinnerName()}}</h2>
+<button (click)="onRestart()">Restart</button>

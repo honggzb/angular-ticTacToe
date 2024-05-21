@@ -1,0 +1,22 @@
+<table>
+  <tbody>
+    <tr>
+      <td (click)="set(0,0)" [class]="getStyle(0, 0)">{{ getPlayerName(0, 0) }}</td>
+      <td (click)="set(1,0)" [class]="getStyle(1, 0)">{{ getPlayerName(1, 0) }}</td>
+      <td (click)="set(2,0)" [class]="getStyle(2, 0)">{{ getPlayerName(2, 0) }}</td>
+    </tr>
+    <tr>
+      <td (click)="set(0,1)" [class]="getStyle(0, 1)">{{ getPlayerName(0, 1) }}</td>
+      <td (click)="set(1,1)" [class]="getStyle(1, 1)">{{ getPlayerName(1, 1) }}</td>
+      <td (click)="set(2,1)" [class]="getStyle(2, 1)">{{ getPlayerName(2, 1) }}</td>
+    </tr>
+    <tr>
+      <td (click)="set(0,2)" [class]="getStyle(0, 2)">{{ getPlayerName(0, 2) }}</td>
+      <td (click)="set(1,2)" [class]="getStyle(1, 2)">{{ getPlayerName(1, 2) }}</td>
+      <td (click)="set(2,2)" [class]="getStyle(2, 2)">{{ getPlayerName(2, 2) }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 [hidden]="winnerIndex === 0">The winner is {{getWinnerName()}}</h2>
+<button (click)="onRestart()">Restart</button>
